@@ -15,6 +15,7 @@ namespace Sudoku
         public Form1()
         {
             InitializeComponent();
+            IntialiserGrille();
         }
 
         /* Tout d'abord il faut remplir la grille
@@ -209,6 +210,32 @@ namespace Sudoku
             IntialiserGrille();
         }
 
+        // Cette fonction va nous permettre de voir si les entrée sont différents des chiffres
+        private bool ChiffresONLY()
+        {
+            bool chiffreOnly = true;
+            // on fera un test de conversion de la châine
+            try
+            {
+                int nb = 0;
+                foreach (TextBox[] tableau in Trois)
+                {
+                    foreach (TextBox unText in tableau)
+                    {
+                        nb = Convert.ToInt16(unText.Text);// On remets les cases au noir
+                    }
+                }
+            }
+
+            catch(Exception)
+            {
+                chiffreOnly = false;
+                
+            }
+            return chiffreOnly;
+        }
+    
+
         //Bouton Valider
         private void button1_Click(object sender, EventArgs e)
         {
@@ -220,60 +247,89 @@ namespace Sudoku
             //On parcours le tableau pour vérifiez si nous avons une entrée
             // Tant qu'on rencontre une chaine vide, le code de vérification ne sera pas executer
             // Si toutes les cases sont remplis on active le bouton Valider
-
-            foreach(TextBox[] Tableau in Trois )
-            {
-                foreach(TextBox unTexte in Tableau)
-                {
-                    if(unTexte.Text == "")
+            
+                    foreach(TextBox[] Tableau in Trois )
                     {
-                        aucuneChaineVide = false;
-                    }
-                }
-            }
-
-
-
-            if (aucuneChaineVide == true)
-            {
-                int nombreDeFois = 0;
-                for (int a = 0; a < 27; a++)// On parcours chaque tableau
-                {
-                    for (int j = 1; j < 10; j++)// A chaque tour un chiffre est testé
-                    {
-                        for (int i = 0; i < 9; i++)// On test pour savoir si le même chiffre est présent plusieurs fois
-                                                   // Sur le même tableau
+                        foreach(TextBox unTexte in Tableau)
                         {
-                            if (Trois[a][i].Text == j.ToString())
+                            if(unTexte.Text == "" && !ChiffresONLY())
                             {
-                                nombreDeFois += 1;
-                            }
-
-                            if (Trois[a][i].Text == j.ToString() && nombreDeFois > 1)
-                            {
-
-                                Trois[a][i].Text += "R";
-                                erreur = true;
+                                aucuneChaineVide = false;
                             }
                         }
-                        nombreDeFois = 0;
                     }
 
-                }
+                       if(aucuneChaineVide== false)
+                    {
+                        label1.Text = "Remplissez toutes les cases avant de valider";
+                    }
 
-
-                if(erreur==true)
-                {
-                    label3.Text = "Votre grille est mauvaise.";
-                }
-
-                else
-                {
-                    label3.Text = "Votre grille est bonne";
-                }
+             if(!ChiffresONLY() && aucuneChaineVide)// et aucuneChaineVideSinon vrai sinon le code s'applique aussi 
+                // Même quand la grille est incomplète
+            {
+                MessageBox.Show("Ne mettez que des chiffres dans la grille");
             }
+            
+
+            if (aucuneChaineVide == true && ChiffresONLY())
+                    {
+                        int nombreDeFois = 0;
+                        for (int a = 0; a < 27; a++)// On parcours chaque tableau
+                        {
+                            for (int j = 1; j < 10; j++)// A chaque tour un chiffre est testé
+                            {
+                                for (int i = 0; i < 9; i++)// On test pour savoir si le même chiffre est présent plusieurs fois
+                                                           // Sur le même tableau
+                                {
+                                    if (Trois[a][i].Text == j.ToString())
+                                    {
+                                        nombreDeFois += 1;
+                                    }
+
+                                    if (Trois[a][i].Text == j.ToString() && nombreDeFois > 1)
+                                    {
+
+                                        Trois[a][i].ForeColor = Color.Red;
+                                        erreur = true;
+                                    }
+                                }
+                                nombreDeFois = 0;
+                            }
+
+                        }
+
+
+                        if(erreur==true)
+                        {
+                            button1.Visible = false;// Le bouton validation disaparait
+                            button3.Visible = true;// On affiche le bouton verif terminée
+
+                            label1.Text = "Votre grille est mauvaise. Reverifiez minutieusement.";
+                            label3.Text = "Si vous avez finis votre correction cliquez sur Verification terminée" +
+                                "pour enlever le rouge. le bouton valider reviendra";
+                        }
+
+                        else
+                        {
+                            label1.Text = "Votre grille est bonne";
+                        }
+                    }
 
             
+        }
+
+        //Verification terminée
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button3.Visible = false;
+            button1.Visible = true; // Le bouton valide redevient visible
+            foreach(TextBox [] tableau in Trois)
+            {
+                foreach(TextBox unText in tableau)
+                {
+                    unText.ForeColor = Color.Black; // On remets les cases au noir
+                }
+            }
         }
     }
     

@@ -122,8 +122,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -147,6 +148,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox9);
@@ -157,7 +159,7 @@
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(29, 22);
+            this.groupBox1.Location = new System.Drawing.Point(30, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(137, 123);
             this.groupBox1.TabIndex = 1;
@@ -255,7 +257,7 @@
             this.groupBox2.Controls.Add(this.textBox17);
             this.groupBox2.Controls.Add(this.textBox18);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(172, 22);
+            this.groupBox2.Location = new System.Drawing.Point(173, 21);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(137, 123);
             this.groupBox2.TabIndex = 2;
@@ -363,7 +365,7 @@
             this.groupBox3.Controls.Add(this.textBox26);
             this.groupBox3.Controls.Add(this.textBox27);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox3.Location = new System.Drawing.Point(315, 22);
+            this.groupBox3.Location = new System.Drawing.Point(316, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(137, 123);
             this.groupBox3.TabIndex = 3;
@@ -471,7 +473,7 @@
             this.groupBox4.Controls.Add(this.textBox35);
             this.groupBox4.Controls.Add(this.textBox36);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox4.Location = new System.Drawing.Point(315, 151);
+            this.groupBox4.Location = new System.Drawing.Point(316, 150);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(137, 123);
             this.groupBox4.TabIndex = 6;
@@ -579,7 +581,7 @@
             this.groupBox5.Controls.Add(this.textBox44);
             this.groupBox5.Controls.Add(this.textBox45);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox5.Location = new System.Drawing.Point(172, 151);
+            this.groupBox5.Location = new System.Drawing.Point(173, 150);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(137, 123);
             this.groupBox5.TabIndex = 5;
@@ -687,7 +689,7 @@
             this.groupBox6.Controls.Add(this.textBox53);
             this.groupBox6.Controls.Add(this.textBox54);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox6.Location = new System.Drawing.Point(29, 151);
+            this.groupBox6.Location = new System.Drawing.Point(30, 150);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(137, 123);
             this.groupBox6.TabIndex = 4;
@@ -795,7 +797,7 @@
             this.groupBox7.Controls.Add(this.textBox62);
             this.groupBox7.Controls.Add(this.textBox63);
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox7.Location = new System.Drawing.Point(315, 280);
+            this.groupBox7.Location = new System.Drawing.Point(316, 279);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(137, 123);
             this.groupBox7.TabIndex = 9;
@@ -903,7 +905,7 @@
             this.groupBox8.Controls.Add(this.textBox71);
             this.groupBox8.Controls.Add(this.textBox72);
             this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox8.Location = new System.Drawing.Point(172, 280);
+            this.groupBox8.Location = new System.Drawing.Point(173, 279);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(137, 123);
             this.groupBox8.TabIndex = 8;
@@ -1011,7 +1013,7 @@
             this.groupBox9.Controls.Add(this.textBox80);
             this.groupBox9.Controls.Add(this.textBox81);
             this.groupBox9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox9.Location = new System.Drawing.Point(29, 280);
+            this.groupBox9.Location = new System.Drawing.Point(30, 279);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(137, 123);
             this.groupBox9.TabIndex = 7;
@@ -1109,7 +1111,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(522, 339);
+            this.button1.Location = new System.Drawing.Point(481, 339);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 62);
             this.button1.TabIndex = 10;
@@ -1119,7 +1121,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(522, 151);
+            this.button2.Location = new System.Drawing.Point(481, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 62);
             this.button2.TabIndex = 11;
@@ -1131,50 +1133,61 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 230);
+            this.label1.Location = new System.Drawing.Point(86, 419);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 18);
+            this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Remplissez toutes les cases avant de valider";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(477, 261);
+            this.label2.Location = new System.Drawing.Point(478, 193);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(264, 54);
+            this.label2.Size = new System.Drawing.Size(269, 72);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Apres validation si vous voyez des R, à\r\ncôté de certains chiffres, vous devez\r\nc" +
-    "orrigez.\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(522, 418);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
-            this.label3.TabIndex = 14;
+            this.label2.Text = "Apres validation si certains chiffres\r\ndeviennent rouges, ça signifie qu\'une ou\r\n" +
+    "plusieurs règles ne sont pas respecté.\r\n\r\n";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(476, 43);
+            this.label4.Location = new System.Drawing.Point(477, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(291, 60);
             this.label4.TabIndex = 15;
             this.label4.Text = "Un unique chiffre par ligne\r\nà la fois une sur sa colonne\r\net à la fois dans son " +
     "carré de 9 cases\r\n";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(481, 297);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(229, 36);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Verification terminée";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 445);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 18);
+            this.label3.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(867, 494);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -1311,8 +1324,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
     }
 }
 
