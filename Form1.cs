@@ -169,6 +169,7 @@ namespace Sudoku
                 for (int j = 0; j < 9; j++)
                 {
                     Trois[i][j].Text = aleatoire.Next(1, 9).ToString();
+                    
                 }
             }
 
@@ -191,6 +192,8 @@ namespace Sudoku
                         if (Trois[a][i].Text == j.ToString())
                         {
                             nombreDeFois += 1;
+
+
                         }
 
                         if (Trois[a][i].Text == j.ToString() && nombreDeFois > 1)
@@ -202,15 +205,47 @@ namespace Sudoku
                     nombreDeFois = 0;
                 }
             }
+
+            //Dans ce for suivant nous allons bloquer le remplissage de cases avec un chiffre déja affecté
+            foreach(TextBox[] tableau in Trois)
+            {
+                for(int i=0; i<9; i++)
+                {
+                    if(tableau[i].Text !="")
+                    {
+                        tableau[i].Enabled = false;
+                    }
+
+                    else
+                    {
+                        tableau[i].ForeColor = Color.Blue;
+                    }
+                }
+            }
         }
 
         //Nouvelle Grille
         private void button2_Click(object sender, EventArgs e)
         {
+            //Il faut veiller à remettre les case préalablement désactivé a la valeur true, active
+            // Et aussi l'ancienne couleur noir partout
+            
+            foreach (TextBox[] tableau in Trois)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    
+                        tableau[i].Enabled = true;
+                        tableau[i].ForeColor = Color.Black;
+                    
+                }
+            }
             IntialiserGrille();
+
         }
 
         // Cette fonction va nous permettre de voir si les entrée sont différents des chiffres
+        // et de gérer l'exception
         private bool ChiffresONLY()
         {
             bool chiffreOnly = true;
@@ -321,7 +356,7 @@ namespace Sudoku
         //Verification terminée
         private void button3_Click(object sender, EventArgs e)
         {
-            button3.Visible = false;
+            button3.Visible = false; // Le bouton verification terminé redevient visible
             button1.Visible = true; // Le bouton valide redevient visible
             foreach(TextBox [] tableau in Trois)
             {
